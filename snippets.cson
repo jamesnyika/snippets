@@ -1,0 +1,43 @@
+'.source.clojure':
+  'React Native Component':
+    'prefix': 'datrnc'
+    'body': """
+      (defn $1 [{:keys [navigation state]}]
+         (fn [{:keys [navigation state]}]
+     
+         )
+      )
+      """
+      
+  'Navigator Route Config':
+    'prefix': 'datrconfig'
+    'body': """
+   (def $1-config {:$2 {:screen (r/reactify-component $3) }
+                   :$4 {:screen (r/reactify-component $5) }})
+      """
+    
+   'c_flatlist':
+     'prefix': 'datflatlist'
+     'body': """
+          [b/_flatlist {:data ["$1" "$2" "$3"]}]
+     """
+     
+   'c_button':
+     'prefix': 'datbutton'
+     'body': """
+          [b/_button {:title "$1"
+                        :actionfn #(rf/dispatch [:$2 :$3])}]
+     """
+      
+  'Util Log':
+    'prefix': 'datlog'
+    'body': """
+      (u/log "$1" $2)
+      """
+      
+  'Markdown Comment':
+    'prefix': 'mdc'
+    'body': """
+       ;; $1
+       ;; - [ ] $2
+      """
